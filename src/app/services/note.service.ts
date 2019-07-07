@@ -28,6 +28,14 @@ export class NoteService {
     return this._http.put(`${Api_Url}/api/Note`, note, { headers: this.getHeaders() });
   }
 
+  starred(note: Note) {
+    if(note.IsStarred) {
+      return this._http.put(`${Api_Url}/api/Note/${note.NoteId}/Star`, null, { headers: this.getHeaders() });
+    } else {
+      return this._http.delete(`${Api_Url}/api/Note/${note.NoteId}/Star`, { headers: this.getHeaders() });
+    }
+  }
+
   private getHeaders() {
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }
