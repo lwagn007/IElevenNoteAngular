@@ -1,0 +1,22 @@
+<h1>Login</h1>
+<hr />
+<!-- What is type in html https://www.w3schools.com/tags/att_input_type.asp -->
+<!-- () == binding an item from the view -->
+<!-- [] = accessing items from the controller -->
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email" type="email" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Password" formControlName="password" type="password" required />
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Login</button>
+</form>
+<br>
+<a routerLink="/register">Register an Account</a>
