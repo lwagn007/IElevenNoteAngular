@@ -1,5 +1,5 @@
 <h1>Note Index</h1>
-<a mat-raised-button color="primary">Create New Note</a>
+<a mat-raised-button color="primary" routerLink="/note/create">Create New Note</a>
 <hr>
 
 <div>
@@ -34,9 +34,9 @@
     <ng-container matColumnDef="buttons">
       <mat-header-cell *matHeaderCellDef></mat-header-cell>
       <mat-cell *matCellDef="let note">
-          <i mat-icon class="material-icons">library_books</i>
-          <i mat-icon class="material-icons">edit</i>
-          <i mat-icon class="material-icons">delete</i>
+          <i mat-icon class="material-icons" routerLink="/note/detail/{{note.NoteId}}">library_books</i>
+          <i mat-icon class="material-icons" routerLink="/note/edit/{{note.NoteId}}">edit</i>
+          <i mat-icon class="material-icons" routerLink="/note/delete/{{note.NoteId}}">delete</i>
       </mat-cell>
     </ng-container>
   </mat-table>

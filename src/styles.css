@@ -6,3 +6,9 @@ html, body {
     padding: 0;
     font-family: 'Roboto', 'Arial', sans-serif;
 }
+
+.nav-btn {
+    margin-right: 0.5em;
+    background-color: #3F51B5;
+    color: white;
+}

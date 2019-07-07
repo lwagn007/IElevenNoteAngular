@@ -19,6 +19,10 @@ import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { NoteService } from './services/note.service';
 import { NoteIndexComponent } from './components/note-index/note-index.component';
+import { NoteCreateComponent } from './components/note-create/note-create.component';
+import { NoteDetailComponent } from './components/note-detail/note-detail.component';
+import { NoteEditComponent } from './components/note-edit/note-edit.component';
+import { NoteDeleteComponent } from './components/note-delete/note-delete.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { NoteIndexComponent } from './components/note-index/note-index.component
     HeaderComponent,
     RegistrationComponent,
     LoginComponent,
-    NoteIndexComponent
+    NoteIndexComponent,
+    NoteCreateComponent,
+    NoteDetailComponent,
+    NoteEditComponent,
+    NoteDeleteComponent
   ],
   imports: [
     BrowserModule,

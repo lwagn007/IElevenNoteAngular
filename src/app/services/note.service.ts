@@ -16,8 +16,16 @@ export class NoteService {
     return this._http.get<Note[]>(`${Api_Url}/api/Note`, { headers: this.getHeaders() });
   }
 
+  getNote(id: string) {
+    return this._http.get(`${Api_Url}/api/Note/${id}`, { headers: this.getHeaders() });
+  }
+
   postNote(note: Note) {
-    return this._http.post(`${Api_Url}/Note`, note, { headers: this.getHeaders() });
+    return this._http.post(`${Api_Url}/api/Note`, note, { headers: this.getHeaders() });
+  }
+
+  updateNote(note: Note) {
+    return this._http.put(`${Api_Url}/api/Note`, note, { headers: this.getHeaders() });
   }
 
   private getHeaders() {

@@ -32,7 +32,7 @@ export class AuthService {
         isLoggedIn: true,
         user: token.username
       });
-      this._router.navigate(['/notes']);
+      this._router.navigate(['/note/index']);
     });
   }
 
