@@ -3,7 +3,7 @@
 <!-- What is type in html https://www.w3schools.com/tags/att_input_type.asp -->
 <!-- () == binding an item from the view -->
 <!-- [] = accessing items from the controller -->
-<form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="loginForm">
   <div>
     <div>
       <mat-form-field>

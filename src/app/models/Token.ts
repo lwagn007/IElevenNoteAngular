@@ -3,6 +3,6 @@ export interface Token {
     token_type: string;
     username: string;
     expires_in: number;
-    issued: Date;
+    sssued: Date;
     expires: Date;
 }
